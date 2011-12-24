@@ -1,3 +1,4 @@
+ifneq ($(BOARD_USE_QCOM_LLVM_CLANG_RS),true)
 LOCAL_PATH := $(call my-dir)
 CLANG_ROOT_PATH := $(LOCAL_PATH)
 
@@ -28,3 +29,4 @@ subdirs := $(addprefix $(LOCAL_PATH)/,$(addsuffix /Android.mk, \
 include $(LOCAL_PATH)/clang.mk
 
 include $(subdirs)
+endif
